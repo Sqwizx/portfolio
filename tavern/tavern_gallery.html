@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Azzam | Tavern Hotpot Gallery</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="tavernstyle.css" />
+    </head>
+    <div id="cursor"></div>
+    <a href="../index.html#projects">
+    <button class="hover-link" area-label="Hover Me" cursor-type="button">
+      <span area-hidden="true">
+        <span>Go<span>Go</span></span>
+        <span>Back<span>Back</span></span>
+      </span>
+    </button>
+    </a>
+    <body>
+        <h1>tavern.</h1>
+        <div class="container">
+            <img src="img1.png" class="block block-1">
+            <img src="img2.png" class="block block-2">
+            <img src="img3.png" class="block block-3">
+            <img src="img4.png" class="block block-4">
+            <img src="img5.png" class="block block-5">
+            <img src="img6.png" class="block block-6">
+        </div>
+        <script src="../index.js"></script>
+        <script>
+            var blocks = document.getElementsByClassName("block");
+            var container = document.getElementsByClassName("container");
+            var hs = new HorizontalScroll.default({
+                blocks: blocks,
+                container: container,
+                isAnimated: true,
+                springEffect: 0.8,
+            });
+        </script>
+
+<script>
+    let cursor = document.getElementById("cursor");
+    const onMouseMove = (event) => {
+      cursor.style.left = event.pageX + "px";
+      cursor.style.top = event.pageY + "px";
+
+      if (event.target.hasAttribute("cursor-type")) {
+        let cursorSize = event.target.getAttribute("cursor-type");
+        cursor.classList.add(cursorSize);
+      } else {
+        cursor.classList = "";
+      }
+    };
+
+    document.addEventListener("mousemove", onMouseMove);
+  </script>
+    </body>
+</html>

@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    background: #161616;
+    overflow: hidden;
+}
+
+.block {
+    position: relative;
+    width: 800px;
+    height: 460px;
+    margin: 10px 300px 20px 80px;
+}
+
+h1 {
+    padding-top: 1%;
+    padding-left: 10%;
+    position: absolute;
+    font-family: "Monument Extended";
+    font-weight: lighter;
+    font-size: 64px;
+}
+
+.block-1 {
+    background: no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.block-2 {
+    background: no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.block-3 {
+    background: no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.block-4 {
+    background: no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.block-5 {
+    background: no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.block-6 {
+    background: no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.container {
+    margin-top: 200px;
+    margin-left: 200px;
+}
+
+img.block.block-1 h1,
+img.block.block-3 h1,
+img.block.block-5 h1 {
+    bottom: -100px;
+    left: -50px;
+}
+
+img.block.block-2 h1,
+img.block.block-4 h1,
+img.block.block-6 h1 {
+    bottom: 400px;
+    right: -50px;
+}
+
+/* HOVER */
+.hover-link {
+    margin: 0 auto;
+    border: none;
+    background: none;
+    color: #fff;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+    padding: 2em 2em 0.5rem;
+    font-family: "Monument Extended";
+    font-size: 1.5em;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+}
+
+.hover-link>span {
+    overflow: hidden;
+    display: block;
+    position: relative;
+    pointer-events: none;
+}
+
+.hover-link>span>span {
+    display: inline-block;
+}
+
+.hover-link>span>span:nth-of-type(1) {
+    transition: 0.4s ease all;
+}
+
+.hover-link>span>span:nth-of-type(2) {
+    transition: 0.4s ease all;
+    transition-delay: 0.07s;
+}
+
+.hover-link>span>span>span {
+    content: attr(data-text);
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(200%);
+}
+
+.hover-link:hover>span>span,
+.hover-link:focus>span>span {
+    transform: translateY(-200%);
+}
+
+#cursor {
+    pointer-events: none;
+    width: 3rem;
+    height: 3rem;
+    border: solid 1px rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.35s ease width, 0.35s ease height, 0.35s ease border,
+        0.35s ease background;
+    transform: translate(-50%, -50%);
+}
+
+#cursor.button {
+    width: 5rem;
+    height: 5rem;
+    border: solid 1px transparent;
+    background: rgba(255, 255, 255, 0.5);
+}
